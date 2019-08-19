@@ -5,7 +5,7 @@ using UnityEngine;
 namespace TextStyleManager
 {
 
-	[CreateAssetMenu(fileName = "TextStyle", menuName = "FontStyleManager/Text Style")]
+	[CreateAssetMenu(fileName = "TextStyle", menuName = "TextStyleManager/Text Style")]
 	public class TextStyle : ScriptableObject
 	{
 		public enum TextDirection

@@ -6,7 +6,7 @@ using UnityEngine;
 namespace TextStyleManager
 {
 
-	[CreateAssetMenu(fileName = "TextStyleMap", menuName = "FontStyleManager/Text Style Map")]
+	[CreateAssetMenu(fileName = "TextStyleMap", menuName = "TextStyleManager/Text Style Map")]
 	public class TextStyleMap : ScriptableObject
 	{
 		#pragma warning disable 0649

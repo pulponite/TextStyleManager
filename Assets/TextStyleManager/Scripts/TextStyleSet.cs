@@ -8,7 +8,7 @@ using UnityEditor;
 
 namespace TextStyleManager
 {
-	[CreateAssetMenu(fileName = "TextStyleSet", menuName = "FontStyleManager/Text Style Set")]
+	[CreateAssetMenu(fileName = "TextStyleSet", menuName = "TextStyleManager/Text Style Set")]
 	public class TextStyleSet : ScriptableObject
 	{
 		#pragma warning disable 0649
