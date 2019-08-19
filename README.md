@@ -28,3 +28,7 @@ Scripting
 ---------
 
 The main method of interest is `TextStyleSet::SetActiveStyleMap`. This will update the stylemap in use at runtime, and all `TextStyleSwitcher`s will update the settings of the TMPro Text component they are managing.
+
+-----------------------------------
+
+<a href="http://patreon.com/pulponitemakes/"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" width="15%" height="15%"></a>
