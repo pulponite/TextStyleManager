@@ -5,7 +5,9 @@ using UnityEngine;
 
 namespace TextStyleManager
 {
-
+	/// <summary>
+	/// Stores a mapping from TextStyleTypes to TextStyle for a given TextStyleSheet.
+	/// </summary>
 	[CreateAssetMenu(fileName = "TextStyleMap", menuName = "TextStyleManager/Text Style Map")]
 	public class TextStyleMap : ScriptableObject
 	{
@@ -19,19 +21,6 @@ namespace TextStyleManager
 		[SerializeField]
 		private List<TextStyleMapEntry> entries;
 		#pragma warning restore 0649
-
-		public List<TextStyleType> registeredTypes
-		{
-			get
-			{
-				var result = new List<TextStyleType>();
-				foreach (var entry in entries)
-				{
-					result.Add(entry.textType);
-				}
-				return result;
-			}
-		}
 
 		private Dictionary<TextStyleType, TextStyle> mapping = null;
 		private Dictionary<TextStyleType, TextStyle> Mapping
@@ -48,6 +37,9 @@ namespace TextStyleManager
 			RefreshMapping();
 		}
 
+		/// <summary>
+		/// Lookup the style mapped to a given type.
+		/// </summary>
 		public TextStyle GetStyle(TextStyleType textType)
 		{
 			TextStyle result = null;
@@ -58,6 +50,11 @@ namespace TextStyleManager
 			return result;
 		}
 
+		/// <summary>
+		/// Ensure that the map has entries for all the TextStyleTypes in the associated TypeStyleSet,
+		/// and remove entries for ones that aren't in the set. Mostly used by editor tooling.
+		/// </summary>
+		/// <returns>True if the entry set needed changing. False otherwise</returns>
 		public bool ValidateStyleEntries()
 		{
 			bool appliedChange = false;
@@ -94,11 +91,14 @@ namespace TextStyleManager
 			return appliedChange;
 		}
 
+		/// <summary>
+		/// Force the map between type and style to be rebuilt on the next query. Used by editor tooling.
+		/// </summary>
 		public void MarkMappingDirty()
 		{
 			mapping = null;
 		}
-
+		
 		private void RefreshMapping()
 		{
 			if (entries == null) return;

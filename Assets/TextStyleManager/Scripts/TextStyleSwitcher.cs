@@ -5,7 +5,9 @@ using UnityEngine;
 
 namespace TextStyleManager
 {
-
+	/// <summary>
+	/// Is responsible for switching styles on TMPro labels, given the stylesheet and style type specified.
+	/// </summary>
 	[RequireComponent(typeof(TMPro.TMP_Text))]
 	public class TextStyleSwitcher : MonoBehaviour
 	{
@@ -30,6 +32,9 @@ namespace TextStyleManager
 			RefreshStyle();
 		}
 
+		/// <summary>
+		/// Force a re-query and application of the applied style, if one exists.
+		/// </summary>
 		public void RefreshStyle()
 		{
 			if (styleSet == null || textType == null) return;
@@ -37,6 +42,9 @@ namespace TextStyleManager
 			styleSet.GetStyle(textType)?.ApplyToTMPText(TMPText);
 		}
 
+		/// <summary>
+		/// Invoke a refresh style on all TextStyleSwitcher components that are active.
+		/// </summary>
 		public static void RefreshStylesInScene()
 		{
 			foreach (var switcher in FindObjectsOfType<TextStyleSwitcher>())

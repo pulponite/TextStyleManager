@@ -52,7 +52,7 @@ namespace TextStyleManager
 			list.serializedProperty.InsertArrayElementAtIndex(index);
 			var element = list.serializedProperty.GetArrayElementAtIndex(index);
 
-			TextStyleType textType = new TextStyleType();
+			TextStyleType textType = ScriptableObject.CreateInstance<TextStyleType>();
 			textType.name = "New Text Type";
 			AssetDatabase.AddObjectToAsset(textType, target);
 
