@@ -6,16 +6,10 @@ using UnityEngine;
 namespace TextStyleManager
 {
 
-	[System.Serializable]
-	public struct TextStyleMapEntry
-	{
-		public TextStyleType textType;
-		public TextStyle style;
-	}
-
 	[CreateAssetMenu(fileName = "TextStyleMap", menuName = "FontStyleManager/Text Style Map")]
 	public class TextStyleMap : ScriptableObject
 	{
+		#pragma warning disable 0649
 		[SerializeField]
 		private TextStyle fallbackStyle;
 
@@ -24,6 +18,7 @@ namespace TextStyleManager
 
 		[SerializeField]
 		private List<TextStyleMapEntry> entries;
+		#pragma warning restore 0649
 
 		public List<TextStyleType> registeredTypes
 		{
@@ -106,6 +101,7 @@ namespace TextStyleManager
 
 		private void RefreshMapping()
 		{
+			if (entries == null) return;
 			mapping = new Dictionary<TextStyleType, TextStyle>();
 			for (int i = 0; i < entries.Count; i++)
 			{
@@ -113,6 +109,13 @@ namespace TextStyleManager
 				mapping[entry.textType] = entry.style;
 			}
 		}
+	}
+
+	[System.Serializable]
+	public struct TextStyleMapEntry
+	{
+		public TextStyleType textType;
+		public TextStyle style;
 	}
 
 }

@@ -27,7 +27,7 @@ MonoBehaviour:
   textTypes:
   - {fileID: -1924577877554759300}
   - {fileID: 8267695715818954316}
-  startingStyleMap: {fileID: 11400000, guid: 79421ce0a238a4c4b91ba898c6a5fb85, type: 2}
+  startingStyleMap: {fileID: 11400000, guid: aa40b758a569cd347b4f6781caeccd72, type: 2}
 --- !u!114 &8267695715818954316
 MonoBehaviour:
   m_ObjectHideFlags: 0

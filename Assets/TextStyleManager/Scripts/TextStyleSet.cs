@@ -8,22 +8,13 @@ using UnityEditor;
 
 namespace TextStyleManager
 {
-
-	[SerializeField]
-	public class TextStyleSetRegisteredMap
-	{
-		public string styleMapId;
-		public TextStyleMap styleMap;
-	}
-
 	[CreateAssetMenu(fileName = "TextStyleSet", menuName = "FontStyleManager/Text Style Set")]
 	public class TextStyleSet : ScriptableObject
 	{
+		#pragma warning disable 0649
 		[SerializeField]
 		private List<TextStyleType> textTypes;
-
-		[SerializeField]
-		private List<TextStyleSetRegisteredMap> registeredStyleMaps;
+		#pragma warning restore 0649
 
 		[SerializeField]
 		private TextStyleMap startingStyleMap;
@@ -72,5 +63,4 @@ namespace TextStyleManager
 			return ActiveStyleMap?.GetStyle(textType);
 		}
 	}
-
 }

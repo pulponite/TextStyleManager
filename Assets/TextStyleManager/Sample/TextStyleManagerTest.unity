@@ -793,9 +793,9 @@ MonoBehaviour:
         m_MethodName: SetActiveStyleMap
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 79421ce0a238a4c4b91ba898c6a5fb85,
+          m_ObjectArgument: {fileID: 11400000, guid: aa40b758a569cd347b4f6781caeccd72,
             type: 2}
-          m_ObjectArgumentAssemblyTypeName: TextStyleMap, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: TextStyleManager.TextStyleMap, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1166,7 +1166,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 820f62944ecb328409a6742a6a54f033,
             type: 2}
-          m_ObjectArgumentAssemblyTypeName: TextStyleMap, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: TextStyleManager.TextStyleMap, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1803,8 +1803,9 @@ GameObject:
   - component: {fileID: 1964550835}
   - component: {fileID: 1964550837}
   - component: {fileID: 1964550836}
+  - component: {fileID: 1964550838}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Select Styles Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1851,8 +1852,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Select Style: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3a490d9306948674296e3607af54fadd, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 48d58ed1ac4239a41a82743f2fd44fcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1877,7 +1878,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 28.65
+  m_fontSize: 27.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1949,6 +1950,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964550834}
   m_CullTransparentMesh: 0
+--- !u!114 &1964550838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964550834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74d1ecc37039e34ba16c200e3875688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styleSet: {fileID: 11400000, guid: af797c1a8376fa849a2a88bd14bef9ec, type: 2}
+  textType: {fileID: 8267695715818954316, guid: af797c1a8376fa849a2a88bd14bef9ec,
+    type: 2}
 --- !u!1 &2091625512
 GameObject:
   m_ObjectHideFlags: 0

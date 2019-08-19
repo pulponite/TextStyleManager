@@ -9,11 +9,13 @@ namespace TextStyleManager
 	[RequireComponent(typeof(TMPro.TMP_Text))]
 	public class TextStyleSwitcher : MonoBehaviour
 	{
+		#pragma warning disable 0649
 		[SerializeField]
 		private TextStyleSet styleSet;
 
 		[SerializeField, HideInInspector]
 		private TextStyleType textType;
+		#pragma warning restore 0649
 
 		private TMPro.TMP_Text TMPText
 		{
