@@ -8,7 +8,7 @@ Screenshots
 
 Simple stylesheet creation process:
 
-![GIF of editing stylesheet](https://i.imgur.com/eY8kUJf.gif)
+![GIF of editing stylesheet](https://i.imgur.com/m9zfGWC.gif)
 
 Preview Stylesheets live:
 
