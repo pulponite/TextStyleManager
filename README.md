@@ -3,6 +3,21 @@ TextStyleManager
 
 TextStyleManager is a Unity asset to help with managing the fonts that are applied to TMPro_Text components in a project, and supporting quickly changing all the fonts that are being used at runtime. The initial use case for this project was to make it easy to switch between sets of fonts for use with different languages when implementing localization. It also facilitates changing the fonts being used throughout a project trivial, while making it very explicit what the set of distinct text presentation types are in use.
 
+Screenshots
+-----------
+
+Simple stylesheet creation process:
+
+![GIF of editing stylesheet](https://i.imgur.com/eY8kUJf.gif)
+
+Preview Stylesheets live:
+
+![GIF of stylesheet changing in Edit mode](https://i.imgur.com/fqkv5lq.gif)
+
+Dynamically restyle labels:
+
+![GIF of styleshet changing in Play mode](https://i.imgur.com/rjdpLfF.gif)
+
 Layout
 ------
 
