@@ -46,4 +46,4 @@ The main method of interest is `TextStyleSet::SetActiveStyleMap`. This will upda
 
 -----------------------------------
 
-<a href="http://patreon.com/pulponitemakes/"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" width="15%" height="15%"></a>
+<!--<a href="http://patreon.com/pulponitemakes/"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" width="15%" height="15%"></a>-->
